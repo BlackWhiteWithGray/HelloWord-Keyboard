@@ -53,6 +53,7 @@
 /* USER CODE BEGIN INCLUDE */
 #include <cmsis_os.h>
 #include "Platform/Communication/interface_usb.hpp"
+#include <stdio.h>
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -347,6 +348,13 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len, uint8_t endpoint_pair)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
+/*
+int _write(int fd, char* ptr, int len) {
+    CDC_Transmit_FS(ptr, len,CDC_OUT_EP);
+    return len;
+}
+ */
+
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

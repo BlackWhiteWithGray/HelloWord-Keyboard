@@ -19,20 +19,20 @@ public:
     };
     enum SpiWs2812Byte_t : uint8_t
     {
-        WS_HIGH = 0xFE,
-        WS_LOW = 0xE0
+        WS_HIGH = 0xF8,
+        WS_LOW = 0x80
     };
     static const uint8_t LED_NUMBER = 4;
     volatile bool isRgbTxBusy;
 
-    void SetRgbBuffer(uint8_t _keyId, Color_t _color);
+    void SetRgbBuffer(uint8_t _keyId, Color_t _color, float _brightness);
     void SyncLights();
 
 private:
     SPI_HandleTypeDef* spiHandle;
     uint8_t rgbBuffer[LED_NUMBER][3][8]{};
     uint8_t wsCommit[64] = {0};
-    uint8_t brightnessPrediv = 2; // 1/4
+    uint8_t brightnessPreDiv = 2; // 1/4
 
 };
 

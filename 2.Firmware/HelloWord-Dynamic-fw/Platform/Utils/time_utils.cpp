@@ -1,7 +1,6 @@
 #include "time_utils.h"
 #include "stm32f4xx_hal.h"
 
-
 __IO uint32_t m, tms, u, t0;
 
 void delay(uint32_t _ms)
@@ -37,7 +36,7 @@ uint64_t micros()
         m = HAL_GetTick();
         u = tms - SysTick->VAL;
     }
-    return (m * 1000 + (u * 1000) / tms);
+    return (m * 1000 + ((u * 1000) / tms));
 }
 
 
@@ -45,5 +44,3 @@ uint32_t millis()
 {
     return HAL_GetTick();
 }
-
-

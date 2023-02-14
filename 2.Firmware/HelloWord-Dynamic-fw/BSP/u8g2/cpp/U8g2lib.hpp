@@ -12,9 +12,9 @@ extern SPI_HandleTypeDef* U8G2_SPI_HANDLE;
 class U8G2 : public Print
 {
 protected:
-    u8g2_t u8g2;
     u8x8_char_cb cpp_next_cb; /*  the cpp interface has its own decoding function for the Arduino print command */
 public:
+    u8g2_t u8g2;
     u8g2_uint_t tx, ty;
 
     U8G2()
@@ -253,7 +253,7 @@ public:
     void drawBitmap(u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t cnt, u8g2_uint_t h, const uint8_t* bitmap)
     { u8g2_DrawBitmap(&u8g2, x, y, cnt, h, bitmap); }
 
-    void DrawXBM(u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t w, u8g2_uint_t h, const uint8_t* bitmap)
+    void DrawXBM(u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t w, u8g2_uint_t h, const uint8_t *bitmap)
     { u8g2_DrawXBM(&u8g2, x, y, w, h, bitmap); }
 
     void drawXBMP(u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t w, u8g2_uint_t h, const uint8_t* bitmap)
@@ -590,7 +590,7 @@ class SSD1306 : public U8G2
 private:
 
 public:
-    explicit SSD1306(I2C_HandleTypeDef* _hi2c, const u8g2_cb_t* rotation = U8G2_R2) : U8G2()
+    explicit SSD1306(I2C_HandleTypeDef* _hi2c, const u8g2_cb_t* rotation = U8G2_R1) : U8G2()
     {
         U8G2_I2C_HANDLE = _hi2c;
         u8g2_Setup_sh1106_i2c_128x32_noname_f(&u8g2, rotation, u8x8_byte_stm32_hw_i2c,

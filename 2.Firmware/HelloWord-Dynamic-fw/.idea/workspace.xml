@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -10,18 +16,285 @@
       <config projectName="HelloWord-Dynamic-fw" targetName="Ctrl-FOC-Dual-fw.elf" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G &quot;MinGW Makefiles&quot;" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064cb8dd-c74c-418a-a862-af96d67ded4c" name="Changes" comment="">
+    <list default="true" id="064cb8dd-c74c-418a-a862-af96d67ded4c" name="Changes" comment="1.增加了OLED界面 包括音量调节功能 键盘亮度调节功能 无阻尼鼠标滚动功能&#10;2.修复了WS2812的时钟频率变更导致显示混乱的问题&#10;3.修复了电机计时器导致的低速抖动问题">
+      <change beforePath="$PROJECT_DIR$/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/REF-STM32F4-fw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/REF-STM32F4-fw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/eink/eink_290_bw.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/eink/eink_290_bw.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/eink/eink_290_bw.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/eink/eink_290_bw.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/inc/cpp_utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/inc/cpp_utils.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/inc/crc.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/inc/crc.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/inc/decoders.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/inc/decoders.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/inc/encoders.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/inc/encoders.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/inc/protocol.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/inc/protocol.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/fibre/src/protocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/fibre/src/protocol.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/Print.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/Print.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/Print.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/Print.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/Printable.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/Printable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/U8g2lib.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/U8g2lib.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/U8x8lib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/U8x8lib.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/U8x8lib.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/U8x8lib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/WString.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/WString.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/WString.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/WString.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/pgmspace.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/pgmspace.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/stdlib_noniso.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/stdlib_noniso.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/cpp/stdlib_noniso.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/cpp/stdlib_noniso.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_bitmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_bitmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_box.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_box.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_buffer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_circle.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_circle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_cleardisplay.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_cleardisplay.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_d_memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_d_memory.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_d_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_d_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_font.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_font.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_fonts.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_fonts.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_hvline.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_input_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_intersection.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_intersection.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_kerning.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_kerning.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_line.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_ll_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_ll_hvline.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_message.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_polygon.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_polygon.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_selection_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8g2_stm32f4.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8g2_stm32f4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8log.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8log.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8log_u8g2.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8log_u8g2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8log_u8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8log_u8x8.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8.h" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_8x8.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_byte.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_byte.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_cad.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_cad.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_capture.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_capture.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_a2printer.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_a2printer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_il3820_296x128.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_il3820_296x128.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ist3020.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ist3020.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ist7920.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ist7920.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ks0108.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ks0108.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_lc7981.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_lc7981.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ld7032_60x32.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ld7032_60x32.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ls013b7dh03.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ls013b7dh03.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_max7219.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_max7219.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcd8544_84x48.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcd8544_84x48.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcf8812.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcf8812.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcf8814_hx1230.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_pcf8814_hx1230.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_s1d15721.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_s1d15721.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_s1d15e06.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_s1d15e06.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sbn1661.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sbn1661.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sed1330.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sed1330.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1106_64x32.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1106_64x32.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1106_72x40.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1106_72x40.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1107.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1107.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1108.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1108.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1122.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_sh1122.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1305.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1305.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x32.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x32.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x64_noname.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x64_noname.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x80_noname.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_128x80_noname.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_2040x16.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_2040x16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_48x64.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_48x64.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_64x32.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_64x32.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_64x48.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_64x48.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_72x40.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_72x40.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_96x16.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1306_96x16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1309.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1309.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1316.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1316.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1317.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1317.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1318.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1318.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1320.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1320.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1322.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1322.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1325.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1325.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1326.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1326.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1327.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1327.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1329.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1329.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1606_172x72.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1606_172x72.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1607_200x200.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_ssd1607_200x200.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7511.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7511.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st75256.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st75256.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7528.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7528.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st75320.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st75320.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7565.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7565.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7567.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7567.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7571.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7571.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_erc240160.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_erc240160.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_s028hn118a.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_s028hn118a.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_ymc240160.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7586s_ymc240160.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7588.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7588.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7920.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_st7920.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_stdio.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_stdio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_t6963.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_t6963.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1601.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1601.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1604.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1604.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1608.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1608.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1610.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1610.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1611.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1611.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1617.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1617.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1638.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1638.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1701_dogs102.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1701_dogs102.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1701_mini12864.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_d_uc1701_mini12864.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_debounce.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_debounce.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_display.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_display.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_fonts.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_fonts.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_input_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_message.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_selection_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_u16toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_u16toa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSP/u8g2/u8x8_u8toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/BSP/u8g2/u8x8_u8toa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists_template.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/adc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/adc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/dma.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/dma.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/gpio.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/gpio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/i2c.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/i2c.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/spi.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/spi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/tim.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/tim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/usart.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/usart.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/adc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/dma.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/dma.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/i2c.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/i2c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/spi.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/spi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/syscalls.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/syscalls.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/system_stm32f4xx.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/system_stm32f4xx.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Driver/Instances/driver_fd6288q.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Driver/Instances/driver_fd6288q.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Driver/Instances/driver_fd6288q.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Driver/Instances/driver_fd6288q.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Driver/driver_base.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Driver/driver_base.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ctrl/Motor/knob.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/knob.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ctrl/Motor/knob.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/knob.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/lowpass_filter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/lowpass_filter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/lowpass_filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/lowpass_filter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/math_utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/math_utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/math_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/math_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/motor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/motor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/motor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/pid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/pid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/pid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/pid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/Instances/low_side_current_sense.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/Instances/low_side_current_sense.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/Instances/low_side_current_sense.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/Instances/low_side_current_sense.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/current_sense_base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/current_sense_base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/current_sense_base.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/CurrentSense/current_sense_base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/Instances/encoder_as5047.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/Instances/encoder_as5047.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/Instances/encoder_as5047.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/Instances/encoder_as5047.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/encoder_base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/encoder_base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/encoder_base.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Sensor/Encoder/encoder_base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Signal/button_base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Signal/button_base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Signal/button_base.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Signal/button_base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" beforeDir="false" afterPath="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWord-Dynamic-fw.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWord-Dynamic-fw.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_mpool.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_mpool.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/croutine.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/croutine.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/list.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/task.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/list.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/queue.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/queue.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/tasks.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/tasks.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/timers.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/timers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/ascii_processor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/ascii_processor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/ascii_processor.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/ascii_processor.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/communication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/communication.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/communication.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/communication.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/interface_uart.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/interface_uart.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/interface_uart.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/interface_uart.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/interface_usb.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/interface_usb.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Communication/interface_usb.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Communication/interface_usb.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Driver/driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Driver/driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Driver/driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Driver/driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Sensor/CurrentSense/current_sense.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Sensor/CurrentSense/current_sense.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Sensor/CurrentSense/current_sense.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Sensor/CurrentSense/current_sense.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Sensor/Encoder/encoder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Sensor/Encoder/encoder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Sensor/Encoder/encoder.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Sensor/Encoder/encoder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_common_tables.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_common_tables.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_const_structs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_const_structs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_math.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/ArmMath/arm_math.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/Memory/random_flash_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/SoftwareI2C/soft_i2c.c" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/SoftwareI2C/soft_i2c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/SoftwareI2C/soft_i2c.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/SoftwareI2C/soft_i2c.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/rgb_light.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/rgb_light.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/rgb_light.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/rgb_light.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/st_hardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/st_hardware.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/st_hardware.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/st_hardware.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/time_utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/time_utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/time_utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/time_utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/timer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/timer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/Utils/timer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/Utils/timer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STM32F405RGTx_FLASH.ld" beforeDir="false" afterPath="$PROJECT_DIR$/STM32F405RGTx_FLASH.ld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usb_device.c" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usb_device.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usb_device.h" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usb_device.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usbd_cdc_if.c" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usbd_cdc_if.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usbd_cdc_if.h" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usbd_cdc_if.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usbd_desc.c" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usbd_desc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/App/usbd_desc.h" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/App/usbd_desc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/Target/usbd_conf.c" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/Target/usbd_conf.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USB_DEVICE/Target/usbd_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/USB_DEVICE/Target/usbd_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/common_inc.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/common_inc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/freertos_inc.h" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/freertos_inc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/protocols/ascii_protocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/protocols/ascii_protocol.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/protocols/usb_protocol.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/protocols/usb_protocol.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup/startup_stm32f405xx.s" beforeDir="false" afterPath="$PROJECT_DIR$/startup/startup_stm32f405xx.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stlink.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/stlink.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +303,22 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="2146" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
@@ -65,9 +354,14 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "cmake.loaded.for.project": "true",
-    "last_opened_file_path": "E:/OnWorking/HelloWord-Keyboard/2.Firmware/HelloWord-Dynamic-fw/Ctrl/Motor",
+    "last_opened_file_path": "F:/HelloWord-Keyboard/2.Firmware/HelloWord-Dynamic-fw",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "CMakeSettings",
-    "structure.view.defaults.are.configured": "true"
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,6 +381,16 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -125,22 +429,12 @@
       <method v="2" />
     </configuration>
     <configuration name="HelloWord-Dynamic-fw.elf" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HelloWord-Dynamic-fw" TARGET_NAME="HelloWord-Dynamic-fw.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="HelloWord-Dynamic-fw" RUN_TARGET_NAME="HelloWord-Dynamic-fw.elf">
-      <openocd version="1" gdb-port="4444" telnet-port="1235" board-config="E:\OnWorking\_Private\HelloWord-dev\2.Firmware\HelloWord-Dynamic-fw\stlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
+      <openocd version="1" gdb-port="4444" telnet-port="1235" board-config="F:\HelloWord-Keyboard-main\2.Firmware\HelloWord-Dynamic-fw\stlink.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
         <debugger kind="GDB" isBundled="true" />
       </openocd>
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="" />
-      <option name="workingDir" value="$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Autodetect">
       <module name="HelloWord-Dynamic-fw" />
@@ -279,6 +573,30 @@
       <workItem from="1658479549618" duration="6478000" />
       <workItem from="1658499259416" duration="4546000" />
       <workItem from="1659172165877" duration="1356000" />
+      <workItem from="1674004633967" duration="25167000" />
+      <workItem from="1674085255758" duration="1367000" />
+      <workItem from="1674094481974" duration="31302000" />
+      <workItem from="1674357293491" duration="37180000" />
+      <workItem from="1674526718781" duration="865000" />
+      <workItem from="1674608056053" duration="3741000" />
+      <workItem from="1674653507234" duration="6546000" />
+      <workItem from="1674719873933" duration="33676000" />
+      <workItem from="1674802363246" duration="34533000" />
+      <workItem from="1674894118806" duration="7611000" />
+      <workItem from="1674910298495" duration="7319000" />
+      <workItem from="1674919153894" duration="256000" />
+      <workItem from="1674933456715" duration="2140000" />
+      <workItem from="1674976974508" duration="20919000" />
+      <workItem from="1675041045527" duration="3472000" />
+      <workItem from="1675156312120" duration="614000" />
+      <workItem from="1675158949759" duration="1935000" />
+      <workItem from="1676105730967" duration="38000" />
+      <workItem from="1676112292555" duration="654000" />
+      <workItem from="1676113016631" duration="610000" />
+      <workItem from="1676132901346" duration="593000" />
+      <workItem from="1676188100929" duration="32000" />
+      <workItem from="1676204589159" duration="2189000" />
+      <workItem from="1676373691506" duration="199000" />
     </task>
     <servers />
   </component>
@@ -287,6 +605,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</url>
+          <line>121</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Platform/Communication/interface_uart.cpp</url>
+          <line>35</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -299,6 +629,8 @@
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="Eink290BW::buffer[1349]" language="ObjectiveC" />
         <watch expression="_packetWriteAddressOffset" />
+        <watch expression="hdma" />
+        <watch expression="hdma_usart2_tx" />
       </configuration>
     </watches-manager>
   </component>

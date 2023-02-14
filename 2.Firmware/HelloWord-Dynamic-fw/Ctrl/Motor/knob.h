@@ -11,12 +11,12 @@ public:
 
     enum Mode_t
     {
-        MODE_DISABLE = 0,
-        MODE_INERTIA,
-        MODE_ENCODER,
-        MODE_SPRING,
-        MODE_DAMPED,
-        MODE_SPIN
+        MODE_INIT = 0,
+        MODE_CHOOSE,
+        MODE_VOLUME,
+        MODE_BRIGHT,
+        MODE_MOVE,
+        MODE_PAGE,
     };
 
     void Init(Motor* _motor);
@@ -32,15 +32,15 @@ public:
 
 private:
     Motor* motor{};
-    Mode_t mode = MODE_DISABLE;
+    Mode_t mode = MODE_INIT;
     float zeroPosition = 0;
-    float limitPositionMax = 5.1;
-    float limitPositionMin = 3.3;
-    int encoderDivides = 12;
+    float limitPositionMax = 3.0;
+    float limitPositionMin = 1.5;
+    int encoderDivides = 36;
     int encoderPosition = 0;
 
-    float lastAngle{};
-    float lastVelocity{};
+    float lastAngle;
+    float lastVelocity;
 };
 
 #endif //HELLOWORD_DYNAMIC_FW_KNOB_H

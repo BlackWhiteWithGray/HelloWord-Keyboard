@@ -57,6 +57,7 @@ void Eink290BW::Init()
     SendData(0x01);
     WaitUntilIdle();
     printf("e-Paper init OK!");
+
 }
 
 void Eink290BW::DrawBitmap(const unsigned char* datas)

@@ -62,6 +62,7 @@ include_directories(
         Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F
         Middlewares/ST/STM32_USB_Device_Library/Core/Inc
         Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
+        Platform/Communication
         USB_DEVICE/App
         USB_DEVICE/Target
         BSP/fibre/cpp/include

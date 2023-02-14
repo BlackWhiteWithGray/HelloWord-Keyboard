@@ -95,9 +95,9 @@ static void UartServerTask(void *ctx)
 }
 
 const osThreadAttr_t uartServerTask_attributes = {
-    .name = "UartServerTask",
-    .stack_size = 512 * 4,
-    .priority = (osPriority_t) osPriorityNormal,
+        .name = "UartServerTask",
+        .stack_size = 512 * 4,
+        .priority = (osPriority_t) osPriorityNormal,
 };
 
 void StartUartServer()
@@ -115,4 +115,5 @@ void StartUartServer()
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
     osSemaphoreRelease(sem_uart_dma);
+    printf("b");
 }

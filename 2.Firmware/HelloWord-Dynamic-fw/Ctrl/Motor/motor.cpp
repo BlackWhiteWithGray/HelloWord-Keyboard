@@ -410,10 +410,3 @@ void Motor::SetTorqueLimit(float _val)
     }
     config.pidAngle.limit = config.velocityLimit;
 }
-
-
-
-
-
-
-
