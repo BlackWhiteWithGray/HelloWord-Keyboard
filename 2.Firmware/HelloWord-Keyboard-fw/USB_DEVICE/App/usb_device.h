@@ -65,6 +65,7 @@
  */
 /* USER CODE BEGIN VARIABLES */
 extern USBD_HandleTypeDef hUsbDeviceFS;
+//extern USBD_HandleTypeDef hUsbDeviceFS1;
 /* USER CODE END VARIABLES */
 /**
   * @}

@@ -21,6 +21,11 @@ typedef struct KeyboardConfig_t
 {
     configStatus_t configStatus;
     uint64_t serialNum;
+    float KeyboardBrightness;
+    uint8_t LightON;
+    uint16_t   FilterTime;
+    uint8_t  TouchEndable;
+    uint8_t  RGBLEDMode;
     int8_t keyMap[128];
 } KeyboardConfig_t;
 

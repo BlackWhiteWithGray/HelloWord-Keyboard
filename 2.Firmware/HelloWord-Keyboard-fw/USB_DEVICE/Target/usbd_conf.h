@@ -75,10 +75,11 @@
 /*---------- -----------*/
 #define USBD_CUSTOMHID_OUTREPORT_BUF_SIZE     64
 /*---------- -----------*/
-#define USBD_CUSTOM_HID_REPORT_DESC_SIZE     89
+#define USBD_CUSTOM_HID_REPORT_DESC_SIZE     226//89//
 /*---------- -----------*/
-#define CUSTOM_HID_FS_BINTERVAL     0x1
+#define CUSTOM_HID_FS_BINTERVAL     0x1U
 
+#define MS_VendorCode 'P'
 /****************************************/
 /* #define for FS and HS identification */
 #define DEVICE_FS 		0

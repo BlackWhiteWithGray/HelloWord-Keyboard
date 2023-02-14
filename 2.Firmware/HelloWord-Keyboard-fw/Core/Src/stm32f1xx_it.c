@@ -24,7 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "common_inc.h"
-
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +44,10 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+uint8_t aRxBuffer[RXBUFFERSIZE];
+uint8_t  USART_RX_BUF[USART_REC_LEN]; //接收缓冲,最大USART_REC_LEN个字节.末字节为换行符
+uint16_t USART_RX_STA;                 //接收状态标记]
+uint8_t Dynamic_BUF[2];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,8 +67,9 @@ extern DMA_HandleTypeDef hdma_spi2_tx;
 extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;
 extern TIM_HandleTypeDef htim4;
+extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
-
+short MediaCount = 0;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -288,6 +292,45 @@ void SPI2_IRQHandler(void)
   /* USER CODE BEGIN SPI2_IRQn 1 */
 
   /* USER CODE END SPI2_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+  uint32_t timeout=0;
+  uint32_t maxDelay=0x1FFF;
+    if(aRxBuffer[0]==0xef){
+        //HAL_UART_Transmit(&huart1,USART_RX_BUF,4,1); //发送得到的数据
+        if(USART_RX_BUF[0]==0xfe)
+        {
+            Dynamic_BUF[0]=USART_RX_BUF[1];
+            Dynamic_BUF[1]=USART_RX_BUF[2];
+ //           while (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TC) != SET);
+            USART_RX_STA = 0;
+        }
+    }
+    else
+    {
+        USART_RX_BUF[USART_RX_STA] = aRxBuffer[0] ;
+        if(USART_RX_BUF[0]!=0xfe)USART_RX_STA = 0;
+        else {
+            USART_RX_STA++;
+            if (USART_RX_STA > (USART_REC_LEN - 1))USART_RX_STA = 0;//接收数据错误,重新开始接收
+        }
+    }
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
+    timeout=0;
+    while(HAL_UART_Receive_IT(&huart1, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)//一次处理完成之后，重新开启中断并设置RxXferCount为1
+    {
+        timeout++; //超时处理
+        if (timeout > maxDelay) break;
+    }
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under Ultimate Liberty license
@@ -34,7 +34,12 @@ extern "C" {
 extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
+#define USART_REC_LEN              20      //定义最大接收字节数 200
 
+
+//用于缓存传输来的每一个字节
+#define RXBUFFERSIZE   1 //缓存大小
+extern uint8_t aRxBuffer[RXBUFFERSIZE];//HAL库USART接收Buffer
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);

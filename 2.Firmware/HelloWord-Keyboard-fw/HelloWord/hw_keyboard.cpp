@@ -1,6 +1,9 @@
 #include <cstring>
 #include "hw_keyboard.h"
+#include "usbd_custom_hid_if.h"
+#include "RGBLight.h"
 
+extern HWKeyboard_RGBLED RGBLED;
 
 inline void DelayUs(uint32_t _us)
 {
@@ -54,7 +57,7 @@ void HWKeyboard::ApplyDebounceFilter(uint32_t _filterTimeUs)
 uint8_t* HWKeyboard::Remap(uint8_t _layer)
 {
     int16_t index, bitIndex;
-
+    memset(RGBLED.RGBLEDKeyBuf,0,11);
     memset(remapBuffer, 0, IO_NUMBER / 8);
     for (int16_t i = 0; i < IO_NUMBER / 8; i++)
     {
@@ -65,69 +68,65 @@ uint8_t* HWKeyboard::Remap(uint8_t _layer)
             if (scanBuffer[index] & (0x80 >> bitIndex))
                 remapBuffer[i] |= 0x80 >> j;
         }
-        remapBuffer[i] = ~remapBuffer[i];
-    }
 
+        remapBuffer[i] = ~remapBuffer[i];
+        RGBLED.RGBLEDKeyBuf[i] = remapBuffer[i];
+    }
+    memcpy(LastHidBuffer,hidBuffer,KEY_REPORT_SIZE);
     memset(hidBuffer, 0, KEY_REPORT_SIZE);
 
     int i = 0, j = 0;
     while (8 * i + j < IO_NUMBER - 6)
     {
-        for (j = 0; j < 8; j++)
-        {
+        for (j = 0; j < 8; j++) {
             index = (int16_t) (keyMap[_layer][i * 8 + j] / 8 + 1); // +1 for modifier
             bitIndex = (int16_t) (keyMap[_layer][i * 8 + j] % 8);
-            if (bitIndex < 0)
-            {
+            if (bitIndex < 0) {
                 index -= 1;
                 bitIndex += 8;
             } else if (index > 100)
                 continue;
 
-            if (remapBuffer[i] & (0x80 >> j))
+            if (remapBuffer[i] & (0x80 >> j)) {
                 hidBuffer[index + 1] |= 1 << (bitIndex); // +1 for Report-ID
+            }
         }
         i++;
         j = 0;
     }
 
+    if(memcmp(LastHidBuffer+1,hidBuffer+1,KEY_REPORT_SIZE-1)==0) {
+        isKeyReport = false;
+    }else{
+        isKeyReport = true;
+        KeyDelayCnt = 20;
+    }
     return hidBuffer;
 }
 
 
 bool HWKeyboard::FnPressed()
 {
-    return remapBuffer[9] & 0x02;
+    return remapBuffer[9] & 0x04;
 }
 
-
-void HWKeyboard::SetRgbBufferByID(uint8_t _keyId, HWKeyboard::Color_t _color, float _brightness)
+uint16_t HWKeyboard::GetHidReportSize(uint8_t _reportId)
 {
-    // To ensure there's no sequence zero bits, otherwise will case ws2812b protocol error.
-    if (_color.b < 1)_color.b = 1;
-
-    for (int i = 0; i < 8; i++)
+    switch (_reportId)
     {
-        rgbBuffer[_keyId][0][i] =
-            ((uint8_t) ((float) _color.g * _brightness) >> brightnessPreDiv) & (0x80 >> i) ? WS_HIGH : WS_LOW;
-        rgbBuffer[_keyId][1][i] =
-            ((uint8_t) ((float) _color.r * _brightness) >> brightnessPreDiv) & (0x80 >> i) ? WS_HIGH : WS_LOW;
-        rgbBuffer[_keyId][2][i] =
-            ((uint8_t) ((float) _color.b * _brightness) >> brightnessPreDiv) & (0x80 >> i) ? WS_HIGH : WS_LOW;
+        case 1:
+            return KEY_REPORT_SIZE;
+        //case 2:
+        //    return RAW_REPORT_SIZE;
+        case 2:
+            return MEDIA_REPORT_SIZE;
+        case 3:
+            return MOUSE_REPORT_SIZE;
+        default:
+            return KEY_REPORT_SIZE;
     }
+
 }
-
-
-void HWKeyboard::SyncLights()
-{
-    while (isRgbTxBusy);
-    isRgbTxBusy = true;
-    HAL_SPI_Transmit_DMA(&hspi2, (uint8_t*) rgbBuffer, LED_NUMBER * 3 * 8);
-    while (isRgbTxBusy);
-    isRgbTxBusy = true;
-    HAL_SPI_Transmit_DMA(&hspi2, wsCommit, 64);
-}
-
 
 uint8_t* HWKeyboard::GetHidReportBuffer(uint8_t _reportId)
 {
@@ -139,19 +138,26 @@ uint8_t* HWKeyboard::GetHidReportBuffer(uint8_t _reportId)
         case 2:
             hidBuffer[KEY_REPORT_SIZE] = 2;
             return hidBuffer + KEY_REPORT_SIZE;
+        case 3:
+            hidBuffer[RAW_REPORT_SIZE] = 3;
+            return hidBuffer + RAW_REPORT_SIZE;
+        case 4:
+            hidBuffer[MEDIA_REPORT_SIZE] = 4;
+            return hidBuffer + MEDIA_REPORT_SIZE;
         default:
             return hidBuffer;
     }
 }
 
-
+//检测按键是否被按下
 bool HWKeyboard::KeyPressed(KeyCode_t _key)
 {
     int index, bitIndex;
 
     if (_key < RESERVED)
     {
-        index = _key / 8;
+        //index = _key / 8;
+        index = 0;
         bitIndex = (_key + 8) % 8;
     } else
     {
@@ -162,52 +168,173 @@ bool HWKeyboard::KeyPressed(KeyCode_t _key)
     return hidBuffer[index + 1] & (1 << bitIndex);
 }
 
-
+//报告按键触发
 void HWKeyboard::Press(HWKeyboard::KeyCode_t _key)
 {
     int index, bitIndex;
-
+    memcpy(LastHidBuffer,hidBuffer,KEY_REPORT_SIZE);
     if (_key < RESERVED)
     {
-        index = _key / 8;
+        //index = _key / 8;
+        index = 0;
         bitIndex = (_key + 8) % 8;
     } else
     {
         index = _key / 8 + 1;
         bitIndex = _key % 8;
     }
-
+    if(memcmp(LastHidBuffer+1,hidBuffer+1,KEY_REPORT_SIZE-1)==0) {
+        isKeyReport = false;
+    }else{
+        isKeyReport = true;
+        KeyDelayCnt = 20;
+    }
     hidBuffer[index + 1] |= (1 << bitIndex);
 }
 
-
+//报告释放按键
 void HWKeyboard::Release(HWKeyboard::KeyCode_t _key)
 {
     int index, bitIndex;
-
+    memcpy(LastHidBuffer,hidBuffer,KEY_REPORT_SIZE);
     if (_key < RESERVED)
     {
-        index = _key / 8;
+        //index = _key / 8;
+        index = 0;
         bitIndex = (_key + 8) % 8;
     } else
     {
         index = _key / 8 + 1;
         bitIndex = _key % 8;
     }
-
+    if(memcmp(LastHidBuffer+1,hidBuffer+1,KEY_REPORT_SIZE-1)==0) {
+        isKeyReport = false;
+    }else{
+        isKeyReport = true;
+        KeyDelayCnt = 20;
+    }
     hidBuffer[index + 1] &= ~(1 << bitIndex);
 }
 
+extern USBD_HandleTypeDef hUsbDeviceFS;
+
+void HWKeyboard::MediaPress(HWKeyboard::KeyCode_t _key)
+{
+    memcpy(LastHidBuffer+RAW_REPORT_SIZE,hidBuffer+RAW_REPORT_SIZE,MEDIA_REPORT_SIZE);
+    switch(_key){
+        case VOLUME_UP:
+            MediaDelaycnt = 10;
+            hidBuffer[RAW_REPORT_SIZE+1] = 0x40;
+            USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS,
+                                       GetHidReportBuffer(3),
+                                       HWKeyboard::MEDIA_REPORT_SIZE);
+            break;
+        case VOLUME_DOWN:
+            MediaDelaycnt = 10;
+            hidBuffer[RAW_REPORT_SIZE+1] = 0x80;
+            USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS,
+                                       GetHidReportBuffer(3),
+                                       HWKeyboard::MEDIA_REPORT_SIZE);
+            break;
+        default:
+
+            break;
+    }
+
+    if(memcmp(LastHidBuffer+RAW_REPORT_SIZE+1,hidBuffer+RAW_REPORT_SIZE+1,MEDIA_REPORT_SIZE-1)==0) {
+        isMediaReport = false;
+    }else{
+        isMediaReport = true;
+    }
+}
+
+
+
+void HWKeyboard::MediaRelease(void)
+{
+
+    if(MediaDelaycnt){
+        MediaDelaycnt--;
+        hidBuffer[RAW_REPORT_SIZE+1] = 0x00;
+        USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS,
+                                   GetHidReportBuffer(3),
+                                   HWKeyboard::MEDIA_REPORT_SIZE);
+    }
+}
+
+
+void HWKeyboard::MouseMove(uint8_t move)
+{
+    hidBuffer[MEDIA_REPORT_SIZE+4] = move-128;
+    USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS,
+                               GetHidReportBuffer(4),
+                               HWKeyboard::MOUSE_REPORT_SIZE);
+}
 
 uint8_t HWKeyboard::GetTouchBarState(uint8_t _id)
 {
-    uint8_t tmp = (remapBuffer[10] & 0b00000001) << 5 |
-                  (remapBuffer[10] & 0b00000010) << 3 |
-                  (remapBuffer[10] & 0b00000100) << 1 |
-                  (remapBuffer[10] & 0b00001000) >> 1 |
-                  (remapBuffer[10] & 0b00010000) >> 3 |
-                  (remapBuffer[10] & 0b00100000) >> 5;
+    uint8_t tmp = (remapBuffer[10] & 0b00000001)  |
+                  (remapBuffer[10] & 0b00000010) << 4 |
+                  (remapBuffer[10] & 0b00000100) << 2 |
+                  (remapBuffer[10] & 0b00001000) >> 0 |
+                  (remapBuffer[10] & 0b00010000) >> 2 |
+                  (remapBuffer[10] & 0b00100000) >> 4;
     return _id == 0 ? tmp : (tmp & (1 << (_id - 1)));
 }
 
 
+uint8_t  HWKeyboard::TouchBarSlide(void) {
+    bool TouchBarState[6];
+    for(int i=0;i<6;i++) {
+        TouchBarState[i] = GetTouchBarState(i+1);
+    }
+    if(TouchBarState[0]+TouchBarState[1]+TouchBarState[2]+TouchBarState[3]+TouchBarState[4]+TouchBarState[5]==0)
+    {
+        if(TouchBarTime>20)TouchBarTime = 0,TouchBarCount=0;
+        else TouchBarTime++;
+    }
+    else TouchBarTime = 0;
+
+    if(TouchBarState[0]==1&&TouchBarCount==0)TouchBarCount=1;
+    if(TouchBarState[1]==1&&TouchBarCount==1)TouchBarCount=2;
+    if(TouchBarState[2]==1&&TouchBarCount==2)TouchBarCount=3;
+    if(TouchBarState[3]==1&&TouchBarCount==3)TouchBarCount=4;
+    if(TouchBarState[4]==1&&TouchBarCount==4)TouchBarCount=5;
+    if(TouchBarState[5]==1&&TouchBarCount==5)
+    {
+        TouchBarCount=0;
+        return 1;
+    }
+
+    if(TouchBarState[5]==1&&TouchBarCount==0)TouchBarCount=11;
+    else if(TouchBarState[4]==1&&TouchBarCount==11)TouchBarCount=12;
+    else if(TouchBarState[3]==1&&TouchBarCount==12)TouchBarCount=13;
+    else if(TouchBarState[2]==1&&TouchBarCount==13)TouchBarCount=14;
+    else if(TouchBarState[1]==1&&TouchBarCount==14)TouchBarCount=15;
+    else if(TouchBarState[0]==1&&TouchBarCount==15)
+    {
+        TouchBarCount=0;
+        return 2;
+    }
+    return 0;
+}
+
+void HWKeyboard::DeskTop(HWKeyboard::KeyCode_t _key)
+{
+    switch(_key){
+        case DeskTopRight:
+            hidBuffer[1] |= 0x09;
+            hidBuffer[11] |= 0x80;
+            break;
+        case DeskTopLeft:
+            hidBuffer[1] |= 0x09;
+            hidBuffer[12] |= 0x01;
+            break;
+        default:
+            break;
+    }
+    USBD_CUSTOM_HID_SendReport(&hUsbDeviceFS,
+                               GetHidReportBuffer(1),
+                               HWKeyboard::KEY_REPORT_SIZE);
+
+}

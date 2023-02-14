@@ -43,7 +43,7 @@
 
 /* USB Device Core handle declaration. */
 USBD_HandleTypeDef hUsbDeviceFS;
-
+//USBD_HandleTypeDef hUsbDeviceFS1;
 /*
  * -- Insert your variables declaration here --
  */
