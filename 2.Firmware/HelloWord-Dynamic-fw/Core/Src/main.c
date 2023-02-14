@@ -125,6 +125,7 @@ HAL_RCC_DeInit();
   MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
 
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -207,7 +208,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM6) {
-    HAL_IncTick();
+    //HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
   else

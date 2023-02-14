@@ -29,7 +29,6 @@ uint16_t EncoderAS5047Base::GetRawData()
 
     // This should shift data to the rightmost bits of the word
     registerVal = SpiTransmitAndRead16Bits(0x00) >> (1 + DATA_START_BIT - RESOLUTION_BITS);
-
     // Return the data, stripping the non data (e.g. parity) bits
     return registerVal & DATA_MASK;
 }

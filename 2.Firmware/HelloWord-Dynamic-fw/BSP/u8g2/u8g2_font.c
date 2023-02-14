@@ -34,7 +34,7 @@
 */
 
 #include "u8g2.h"
-
+#include "stdio.h"
 /* size of the font data structure, there is no struct or class... */
 /* this is the size for the new font format */
 #define U8G2_FONT_DATA_STRUCT_SIZE 23
@@ -1126,7 +1126,7 @@ static u8g2_uint_t u8g2_string_width(u8g2_t *u8g2, const char *str)
   w = 0;
   dx = 0;
 
-  // printf("str=<%s>\n", str);
+   printf("str=<%s>\n", str);
 	
   for(;;)
   {
@@ -1149,7 +1149,7 @@ static u8g2_uint_t u8g2_string_width(u8g2_t *u8g2, const char *str)
     /* issue #46: we have to add the x offset also */
     w += u8g2->glyph_x_offset;	/* this value is set as a side effect of u8g2_GetGlyphWidth() */
   }
-  // printf("w=%d \n", w);
+   printf("w=%d \n", w);
   
   return w;  
 }

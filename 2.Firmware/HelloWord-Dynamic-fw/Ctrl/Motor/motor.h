@@ -22,8 +22,8 @@ public:
 
         config.lpfCurrentQ = LowPassFilter{0.005f};
         config.lpfCurrentD = LowPassFilter{0.005f};
-        config.lpfVelocity = LowPassFilter{0.1f};
-        config.lpfAngle = LowPassFilter{0.03f};
+        config.lpfVelocity = LowPassFilter{0.4f};
+        config.lpfAngle = LowPassFilter{0.04f};
         config.pidCurrentQ = PidController{3, 300.0f, 0.0f, 0, 12.0f};
         config.pidCurrentD = PidController{3, 300.0f, 0.0f, 0, 12.0f};
         config.pidVelocity = PidController{0.5f, 10.0f, 0.0f, 1000.0f, 12.0f};

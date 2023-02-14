@@ -61,9 +61,9 @@ osSemaphoreId sem_can1_tx;
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 1000 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+        .name = "defaultTask",
+        .stack_size = 1000 * 4,
+        .priority = (osPriority_t) osPriorityNormal,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -83,15 +83,15 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   * @retval None
   */
 void MX_FREERTOS_Init(void) {
-  /* USER CODE BEGIN Init */
+    /* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+    /* USER CODE END Init */
 
-  /* USER CODE BEGIN RTOS_MUTEX */
+    /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
+    /* USER CODE END RTOS_MUTEX */
 
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
+    /* USER CODE BEGIN RTOS_SEMAPHORES */
     // Init usb irq binary semaphore, and start with no tokens by removing the starting one.
     osSemaphoreDef(sem_usb_irq);
     sem_usb_irq = osSemaphoreNew(1, 0, osSemaphore(sem_usb_irq));
@@ -112,34 +112,34 @@ void MX_FREERTOS_Init(void) {
     osSemaphoreDef(sem_can1_tx);
     sem_can1_tx = osSemaphoreNew(1, 1, osSemaphore(sem_can1_tx));
 
-  /* USER CODE END RTOS_SEMAPHORES */
+    /* USER CODE END RTOS_SEMAPHORES */
 
-  /* USER CODE BEGIN RTOS_TIMERS */
+    /* USER CODE BEGIN RTOS_TIMERS */
 
-  /* USER CODE END RTOS_TIMERS */
+    /* USER CODE END RTOS_TIMERS */
 
-  /* USER CODE BEGIN RTOS_QUEUES */
+    /* USER CODE BEGIN RTOS_QUEUES */
     // This Task must run before MX_USB_DEVICE_Init(), so have to put it here.
     const osThreadAttr_t usbIrqTask_attributes = {
-        .name = "usbIrqTask",
-        .stack_size = 128 * 4,
-        .priority = (osPriority_t) osPriorityAboveNormal,
+            .name = "usbIrqTask",
+            .stack_size = 128 * 4,
+            .priority = (osPriority_t) osPriorityAboveNormal,
     };
     usbIrqTaskHandle = osThreadNew(UsbDeferredInterruptTask, NULL, &usbIrqTask_attributes);
 
-  /* USER CODE END RTOS_QUEUES */
+    /* USER CODE END RTOS_QUEUES */
 
-  /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+    /* Create the thread(s) */
+    /* creation of defaultTask */
+    defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
-  /* USER CODE BEGIN RTOS_THREADS */
+    /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
+    /* USER CODE END RTOS_THREADS */
 
-  /* USER CODE BEGIN RTOS_EVENTS */
+    /* USER CODE BEGIN RTOS_EVENTS */
     /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
+    /* USER CODE END RTOS_EVENTS */
 
 }
 
@@ -152,15 +152,15 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
-  /* USER CODE BEGIN StartDefaultTask */
+    /* init code for USB_DEVICE */
+    MX_USB_DEVICE_Init();
+    /* USER CODE BEGIN StartDefaultTask */
 
     // Invoke cpp-version main().
     Main();
 
     vTaskDelete(defaultTaskHandle);
-  /* USER CODE END StartDefaultTask */
+    /* USER CODE END StartDefaultTask */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -159,7 +159,7 @@ extern void xPortSysTickHandler (void);
 void SysTick_Handler (void) {
   /* Clear overflow flag */
   SysTick->CTRL;
-
+  HAL_IncTick();
   if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED) {
     /* Call tick handler */
     xPortSysTickHandler();

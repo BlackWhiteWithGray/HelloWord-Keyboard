@@ -1,15 +1,15 @@
 #include "communication.hpp"
 #include "common_inc.h"
-
+#include "usart.h"
 
 volatile bool endpointListValid = false;
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 osThreadId_t commTaskHandle;
 const osThreadAttr_t commTask_attributes = {
-    .name = "commTask",
-    .stack_size = 2048 * 4,
-    .priority = (osPriority_t) osPriorityNormal,
+        .name = "commTask",
+        .stack_size = 2048 * 4,
+        .priority = (osPriority_t) osPriorityNormal,
 };
 
 
@@ -35,8 +35,6 @@ void UsbDeferredInterruptTask(void *ctx)
 
 void InitCommunication(void)
 {
-    printf("\r\nHello, Ctrl-FOC v%.1f Started!\r\n", CONFIG_FW_VERSION);
-
     // Start command handling thread
     commTaskHandle = osThreadNew(CommunicationTask, nullptr, &commTask_attributes);
 
@@ -68,11 +66,13 @@ void CommunicationTask(void *ctx)
 extern "C" {
 int _write(int file, const char *data, int len);
 }
-
 // @brief This is what printf calls internally
 int _write(int file, const char *data, int len)
 {
     usb_stream_output_ptr->process_bytes((uint8_t *) data, len, nullptr);
-    uart2_stream_output_ptr->process_bytes((uint8_t *) data, len, nullptr);
+
+    //uart2_stream_output_ptr->process_bytes((uint8_t *) data, len, nullptr);
+    //CDC_Transmit_FS((uint8_t *)data, 6,CDC_OUT_EP);
+
     return len;
 }
