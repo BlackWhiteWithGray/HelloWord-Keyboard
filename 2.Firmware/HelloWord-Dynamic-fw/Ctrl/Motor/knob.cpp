@@ -22,7 +22,7 @@ void KnobSimulator::Init(Motor* _motor)
 
     // When motor calibrated, we can replace Init with something like:
 
-    if (motor->Init(5.532302,EncoderBase::CCW))
+    if (motor->Init())//5.532302,EncoderBase::CCW))
     {
         printf("ZeroElectricAngleOffset: %f | Encoder direction: %s\n", motor->zeroElectricAngleOffset,
                motor->encoder->countDirection == EncoderBase::CW ? "CW" : "CCW");
