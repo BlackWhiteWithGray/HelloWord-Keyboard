@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064cb8dd-c74c-418a-a862-af96d67ded4c" name="Changes" comment="1.增加了OLED界面 包括音量调节功能 键盘亮度调节功能 无阻尼鼠标滚动功能&#10;2.修复了WS2812的时钟频率变更导致显示混乱的问题&#10;3.修复了电机计时器导致的低速抖动问题">
+      <change beforePath="$PROJECT_DIR$/../Bin2Uf2/HelloWord-Dynamic-fw.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Bin2Uf2/HelloWord-Dynamic-fw.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bin2Uf2/HelloWord-Dynamic-fw.uf2" beforeDir="false" afterPath="$PROJECT_DIR$/../Bin2Uf2/HelloWord-Dynamic-fw.uf2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ctrl/Motor/knob.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ctrl/Motor/knob.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "cmake.loaded.for.project": "true",
-    "last_opened_file_path": "D:/Browser Download/HelloWord-Keyboard-main (3)/HelloWord-Keyboard-main/2.Firmware/HelloWord-Dynamic-fw",
+    "last_opened_file_path": "F:/HelloWord-Keyboard/2.Firmware/HelloWord-Keyboard-fw",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,9 +123,9 @@
       <option name="showConsole" value="true" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -328,6 +331,7 @@
       <workItem from="1676373691506" duration="199000" />
       <workItem from="1676375293444" duration="1051000" />
       <workItem from="1676545334198" duration="1810000" />
+      <workItem from="1676548402037" duration="4374000" />
     </task>
     <servers />
   </component>

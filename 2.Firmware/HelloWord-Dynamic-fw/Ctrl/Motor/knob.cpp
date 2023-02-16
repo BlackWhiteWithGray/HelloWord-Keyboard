@@ -22,7 +22,7 @@ void KnobSimulator::Init(Motor* _motor)
 
     // When motor calibrated, we can replace Init with something like:
 
-    if (motor->Init())//5.532302,EncoderBase::CCW))
+    if (motor->Init(5.532302,EncoderBase::CCW))
     {
         printf("ZeroElectricAngleOffset: %f | Encoder direction: %s\n", motor->zeroElectricAngleOffset,
                motor->encoder->countDirection == EncoderBase::CW ? "CW" : "CCW");
@@ -48,9 +48,9 @@ void KnobSimulator::SetMode(KnobSimulator::Mode_t _mode)
             motor->config.pidVelocity.p = 0.1;
             motor->config.pidVelocity.i = 0.0;
             motor->config.pidVelocity.d = 0.0;
-            motor->config.pidAngle.p = 100;
+            motor->config.pidAngle.p = 60.0;
             motor->config.pidAngle.i = 0;
-            motor->config.pidAngle.d = 3.0;
+            motor->config.pidAngle.d = 2.0;
             motor->target = limitPositionMax;
         }
             break;
@@ -62,9 +62,9 @@ void KnobSimulator::SetMode(KnobSimulator::Mode_t _mode)
             motor->config.pidVelocity.p = 0.1;
             motor->config.pidVelocity.i = 0.0;
             motor->config.pidVelocity.d = 0.0;
-            motor->config.pidAngle.p = 100;
+            motor->config.pidAngle.p = 60.0;
             motor->config.pidAngle.i = 0;
-            motor->config.pidAngle.d = 3.0;
+            motor->config.pidAngle.d = 2.0;
             motor->target = limitPositionMax;
         }
             break;
@@ -76,9 +76,9 @@ void KnobSimulator::SetMode(KnobSimulator::Mode_t _mode)
             motor->config.pidVelocity.p = 0.1;
             motor->config.pidVelocity.i = 0.0;
             motor->config.pidVelocity.d = 0.0;
-            motor->config.pidAngle.p = 80;
+            motor->config.pidAngle.p = 60.0;
             motor->config.pidAngle.i = 0;
-            motor->config.pidAngle.d = 3.0;
+            motor->config.pidAngle.d = 2.0;
             motor->target = (limitPositionMax+limitPositionMin)/2;
             lastAngle = (limitPositionMax+limitPositionMin)/2;
         }
@@ -91,7 +91,7 @@ void KnobSimulator::SetMode(KnobSimulator::Mode_t _mode)
             motor->config.pidVelocity.p = 0.1;
             motor->config.pidVelocity.i = 0.0;
             motor->config.pidVelocity.d = 0.0;
-            motor->config.pidAngle.p = 40;
+            motor->config.pidAngle.p = 40.0;
             motor->config.pidAngle.i = 0;
             motor->config.pidAngle.d = 2;
             motor->target = 0;
@@ -116,7 +116,7 @@ void KnobSimulator::SetMode(KnobSimulator::Mode_t _mode)
             motor->config.pidVelocity.p = 0.1;
             motor->config.pidVelocity.i = 0.0;
             motor->config.pidVelocity.d = 0.0;
-            motor->config.pidAngle.p = 100;
+            motor->config.pidAngle.p = 50.0;
             motor->config.pidAngle.i = 0;
             motor->config.pidAngle.d = 3.5;
             motor->target = (limitPositionMax+limitPositionMin)/2;
