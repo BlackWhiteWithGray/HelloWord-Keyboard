@@ -58,7 +58,7 @@ public:
         RGBLEDNegate,
     };
 
-    float KeyboardBrightness = 0.7;
+    float KeyboardBrightness = 1.0;
     bool LightON = false;
     volatile bool isRgbTxBusy;
     bool isCapsLocked = false;

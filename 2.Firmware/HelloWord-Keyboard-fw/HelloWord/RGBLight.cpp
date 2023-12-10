@@ -471,8 +471,8 @@ void HWKeyboard_RGBLED::RGBLED_ModeHandle(uint8_t mode)
                             LedPress[RGBLEDKeymap[i + 14]] = BrightPress5;
                         } else if (i == 58)//SHIFTL
                         {
-                            LedPress[RGBLEDKeymap[i - 15]] = BrightPress5;
-                            LedPress[RGBLEDKeymap[i - 14]] = BrightPress3;
+                            LedPress[RGBLEDKeymap[i - 14]] = BrightPress5;
+                            LedPress[RGBLEDKeymap[i - 13]] = BrightPress3;
                             LedPress[RGBLEDKeymap[i]] = BrightPress;
                             LedPress[RGBLEDKeymap[i + 1]] = BrightPress7;
                             LedPress[RGBLEDKeymap[i + 14]] = BrightPress5;

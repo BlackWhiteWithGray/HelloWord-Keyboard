@@ -25,6 +25,7 @@
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
+#include "iwdg.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -96,8 +97,9 @@ HAL_RCC_DeInit();
   MX_USART1_UART_Init();
   MX_USB_DEVICE_Init();
   MX_SPI2_Init();
+  MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
-    Main();
+  Main();
   /* USER CODE END 2 */
 
   /* Infinite loop */

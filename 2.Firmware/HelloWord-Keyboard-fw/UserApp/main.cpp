@@ -2,6 +2,7 @@
 #include "configurations.h"
 #include "hw_keyboard.h"
 #include "time.h"
+#include "iwdg.h"
 #include "stm32f1xx_hal_uart.h"
 
 
@@ -22,11 +23,11 @@ void Main()
         config = KeyboardConfig_t{
             .configStatus = CONFIG_OK,
             .serialNum=123,
-            .KeyboardBrightness = 0.7,
+            .KeyboardBrightness = 1.0,
             .LightON = 1,
             .FilterTime = 100,
             .TouchEndable = 1,
-            .RGBLEDMode = 0,
+            .RGBLEDMode = 4,
             .keyMap={},
         };
         memset(config.keyMap, -1, 128);
@@ -76,6 +77,7 @@ void Main()
                     break;
             }
         }
+        HAL_IWDG_Refresh(&hiwdg);
     }
 }
 
